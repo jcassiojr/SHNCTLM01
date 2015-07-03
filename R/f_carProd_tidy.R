@@ -9,7 +9,8 @@
 f_carProd_tidy <- function(mm_aaaa,in_prodalp, in_indcombo)
 {
     # lendo os dados do ano a partir da planilha gerada e gerando os .csv
-    f_LeTDB(mm_aaaa)
+    # chamar esta função a primeira vez que tiver o TDB Produção do mês
+    #f_LeTDB(mm_aaaa)
     # criando vetor de sociedade
   v_soci <- rep("CTLM", 375)
   v_soci[1] <- "??L?"
@@ -420,7 +421,7 @@ if (in_prodalp == "TCTL") {
 # fileout <- paste0("../CTL01dashb/tidydata/dshRelCTL01-CarProd-", in_prodalp,".xlsx")
 # idem
 #filein1 <- "../CTL01dashb/rawdata/rawCarprod.csv"
-filein1 <- paste0("./tidydata/", mm_aaaa,"/tidyCarprod.csv")
+filein1 <- paste0("./tidydata/", mm_aaaa,"/tidyCarProd.csv")
 
 
 ######################################################################################
